@@ -1,8 +1,6 @@
-import java.util.*;
-
 /** TC = O(n + d)   **/
 
-public class Q05_left_rotate_an_array_by_D_places{
+public class Q6_right_rotate_array_by_d_places{
 
     public static void main(String[] args) {
 
@@ -31,19 +29,17 @@ public class Q05_left_rotate_an_array_by_D_places{
 
         //step 1 - store in temp
         for(int i=0; i<d; i++){
-            temp[i] = arr[i];
+            temp[i] = arr[n - d + i];
         }
 
         //step 2 - shift
-        for(int i=d; i<n; i++){
-            arr[i-d] = arr[i];
+        for(int i=n-1; i>=d; i--){
+            arr[i] = arr[i-d];
         }
 
         //step 4 - place the rotated in arr
-        int j = 0;
-        for(int i=n-d; i<n; i++){
-            arr[i] = temp[j];
-            j++;
+        for(int i=0; i<d; i++){
+            arr[i] = temp[i];
         }
 
 
