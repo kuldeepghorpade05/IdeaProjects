@@ -1,38 +1,48 @@
+
 import java.util.*;
 
-public class PlayGround {
-
-    static int[] moveZeros(int[] arr) {
-        // Temporary array:
-        ArrayList<Integer> temp = new ArrayList<>();
-
-        // Copy non-zero elements from original -> temp array:
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] != 0) {
-                temp.add(arr[i]);
-            }
-        }
-
-        // Number of non-zero elements.
-        int nz = temp.size();
-
-        // Copy elements from temp to fill the first nz fields of the original array:
-        for (int i = 0; i < nz; i++) {
-            arr[i] = temp.get(i);
-        }
-
-        // Fill the rest of the cells with 0:
-        for (int i = nz; i < arr.length; i++) {
-            arr[i] = 0;
-        }
-        return arr;
-    }
-
+class playGround{
     public static void main(String[] args) {
-        int[] arr = {1, 0, 2, 3, 2, 0, 0, 4, 5, 1};
-        int[] ans = moveZeros(arr);
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(ans[i] + " ");
+
+        int[] arr1 = {1, 1, 2, 3, 4, 5};
+        int[] arr2 = {2, 3, 4, 4, 5, 6, 7};
+
+        for(int i:arr1){
+            System.out.print(i+" ");
         }
+        System.out.println();
+        for(int i:arr2){
+            System.out.print(i+" ");
+        }
+        System.out.println();
+
+        Set<Integer> values =   unionarray(arr1,arr2);
+
+        System.out.print(values+" ");
+
+
     }
+
+    static Set<Integer> unionarray(int[] arr1, int[] arr2){
+
+        Set<Integer> unique = new HashSet<>();
+
+        for(int i=0; i<arr1.length; i++){
+            unique.add(arr1[i]);
+        }
+
+        for(int i=0; i<arr2.length; i++){
+            unique.add(arr2[i]);
+        }
+
+        return unique;
+
+
+    }
+
+
+
+
+
+
 }
