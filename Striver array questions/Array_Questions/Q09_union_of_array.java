@@ -1,5 +1,7 @@
 import java.util.*;
 
+//  TWO POINTERS (OPTIMAL APPROACH)  TC = O(n1 + n2)
+
 class Q09_union_of_array{
     static ArrayList<Integer> FindUnion(int arr1[], int arr2[], int n, int m) {
         int i = 0, j = 0; // pointers
@@ -17,6 +19,7 @@ class Q09_union_of_array{
                 j++;
             }
         }
+
         while (i < n) // IF any element left in arr1
         {
             if (Union.get(Union.size()-1) != arr1[i])
@@ -36,6 +39,7 @@ class Q09_union_of_array{
         int n = 10, m = 7;
         int arr1[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         int arr2[] = {2, 3, 4, 4, 5, 11, 12};
+
         ArrayList<Integer> Union = FindUnion(arr1, arr2, n, m);
         System.out.println("Union of arr1 and arr2 is ");
         for (int val: Union)
