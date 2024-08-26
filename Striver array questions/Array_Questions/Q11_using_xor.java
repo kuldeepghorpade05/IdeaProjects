@@ -1,7 +1,8 @@
 
 import java.util.*;
 
-class playGround {
+/** TC = O(N) using xor^ method **/
+class Q11_using_xor {
     public static int missingNumber(int []a, int N) {
 
         int xor1 = 0, xor2 = 0;
@@ -12,10 +13,11 @@ class playGround {
         }
         xor1 = xor1 ^ N; //XOR up to [1...N]
 
-//        int missingnum = xor1 ^ xor2;
-
         return (xor1 ^ xor2); // the missing number
+
+//        int missingnum = xor1 ^ xor2;
 //        return missingnum;
+
     }
 
     public static void main(String args[]) {

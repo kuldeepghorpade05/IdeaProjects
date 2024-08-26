@@ -1,4 +1,4 @@
-/** import java.util.ArrayList;
+import java.util.ArrayList;
 // brute force TC = O(2n)
 
 public class Q07_Move_zero_to_end {
@@ -40,7 +40,7 @@ public class Q07_Move_zero_to_end {
 
 
     }
-} **/
+}
 
 
 

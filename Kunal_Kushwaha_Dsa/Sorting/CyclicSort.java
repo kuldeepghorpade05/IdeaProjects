@@ -35,8 +35,8 @@ public class CyclicSort {
 //    static  void CycleSort(int[] arr){
 //        int i = 0;
 //        while(i < arr.length){
-//            int correct = arr[i] - 1;
-//            if(arr[i] < arr.length && arr[i] != arr[correct]){
+//            int correct = arr[i];
+//            if(arr[i] != arr[correct]){
 //                swap(arr, i, correct);
 //            }else {
 //                i++;
