@@ -1,7 +1,7 @@
 
 import java.util.*;
 
-/** TC = O(N) using xor^ method **/
+/** TC = O(N) using xor^ method  **/
 class Q11_using_xor {
     public static int missingNumber(int []a, int N) {
 
