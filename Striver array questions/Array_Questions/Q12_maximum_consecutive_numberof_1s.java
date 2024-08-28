@@ -1,5 +1,6 @@
 import java.util.*;
 
+/** TC = O(N) **/
 public class Q12_maximum_consecutive_numberof_1s {
     public static void main(String[] args) {
 
