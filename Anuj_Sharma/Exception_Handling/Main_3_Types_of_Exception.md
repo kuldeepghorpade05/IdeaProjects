@@ -2,12 +2,12 @@ In Java, exceptions and errors are categorized into three main types: checked ex
 
 ### 1. **Checked Exceptions**
 - **Definition**: Checked exceptions are exceptions that are checked at compile-time. The Java compiler requires that these exceptions be either caught or declared in the method signature using a `throws` clause.
-- **Examples**: `IOException`, `SQLException`, `FileNotFoundException`.
+- **Examples**: `Exception_Handling.Runtime_Exception.IOException`, `SQLException`, `FileNotFoundException`.
 - **Usage**: They typically represent conditions that a reasonable application might want to catch. For example, when performing file I/O, a `FileNotFoundException` might be thrown, and the programmer is expected to handle this possibility.
 
 - **Example Code**:
   ```java
-  public void readFile(String fileName) throws IOException {
+  public void readFile(String fileName) throws Exception_Handling.Runtime_Exception.IOException {
       FileReader file = new FileReader(fileName);
       BufferedReader fileInput = new BufferedReader(file);
       fileInput.readLine();

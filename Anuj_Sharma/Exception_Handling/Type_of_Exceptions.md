@@ -3,7 +3,7 @@ In Java, exceptions are categorized into three main types: checked exceptions, u
 ### 1. **Checked Exceptions**
 Checked exceptions are exceptions that must be either caught or declared in the method signature using `throws`. They are checked at compile-time.
 
-- **`IOException`**: This is a checked exception, which includes subclasses like `FileNotFoundException`.
+- **`Exception_Handling.Runtime_Exception.IOException`**: This is a checked exception, which includes subclasses like `FileNotFoundException`.
 - **`SQLException`**: This is a checked exception, thrown when there is an error during database access.
 - **`NoSuchMethodException`**: This is a checked exception, indicating that a particular method cannot be found.
 - **`NoSuchFieldException`**: This is a checked exception, raised when a particular field is not found.
@@ -29,7 +29,7 @@ Errors are serious problems that a reasonable application should not try to catc
 ### Summary List
 
 - **Checked Exceptions:**
-    - `IOException`
+    - `Exception_Handling.Runtime_Exception.IOException`
     - `SQLException`
     - `NoSuchMethodException`
     - `NoSuchFieldException`
@@ -63,7 +63,7 @@ From the list provided, the most important exceptions frequently discussed in Ja
 
 5. **`NumberFormatException`**: Frequently occurs when converting strings to numbers, so understanding how to validate input is key.
 
-6. **`IOException`**: A broad exception covering many file and I/O operations, it’s important to know how to handle it properly, especially when dealing with files or network operations.
+6. **`Exception_Handling.Runtime_Exception.IOException`**: A broad exception covering many file and I/O operations, it’s important to know how to handle it properly, especially when dealing with files or network operations.
 
 7. **`IllegalArgumentException`**: Often thrown by methods to indicate that an illegal or inappropriate argument has been passed, understanding its usage is crucial for designing methods with good error handling.
 

@@ -1,4 +1,4 @@
-
+package Exception_Handling;
 
 /** throws is basically a waring of a particular method that can throw an exception we
   can mention throws in function or method and warn programmer who is using that function

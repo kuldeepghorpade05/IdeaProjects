@@ -1,15 +1,13 @@
-package Runtime_Exception;
+package Exception_Handling.Runtime_Exception;
 
 // Exception - to handle all type of exceptions
 
 // ArrayIndexOutOfBoundsException
 // ArithmeticException
 // NullPointerException
-// IOException
+// Exception_Handling.Runtime_Exception.IOException
 // RuntimeException
 
-
-import java.io.IOException;
 
 public class Runtime01 {
     public static void main(String[] args) {

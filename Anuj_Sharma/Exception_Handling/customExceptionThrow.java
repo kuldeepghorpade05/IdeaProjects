@@ -1,3 +1,5 @@
+package Exception_Handling;
+
 import java.util.Scanner;
 
 /** to create custom exception we can create and use throw **/
@@ -13,7 +15,7 @@ public class customExceptionThrow {
         try {
             int age = sc.nextInt();
             if (age > 100) {
-                //using mycreatedexception
+                //using Exception_Handling.Runtime_Exception.mycreatedexception
                 throw new mycreatedexception("my error is this");
 //                throw new ArithmeticException("more than 100 not allowed");
             }
