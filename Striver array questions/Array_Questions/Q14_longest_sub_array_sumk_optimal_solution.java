@@ -3,7 +3,7 @@ import java.util.*;
 
 // To find the longest length sub-array in array with sum of k : TC - O(n)
 
-public class PLAYGROUND {
+public class Q14_longest_sub_array_sumk_optimal_solution {
     public static int getLongestSubarray(int[] arr, int sum) {
 
         int currentsum = 0;
