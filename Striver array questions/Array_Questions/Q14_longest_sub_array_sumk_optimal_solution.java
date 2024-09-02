@@ -4,6 +4,16 @@ import java.util.*;
 // To find the longest length sub-array in array with sum of k : TC - O(n)
 
 public class Q14_longest_sub_array_sumk_optimal_solution {
+
+    public static void main(String[] args) {
+
+        int[] a = {10, 2, -2, -20, 10};
+        int sum = -10;
+
+        int len = getLongestSubarray(a, sum);
+        System.out.println("The length of the longest subarray is: " + len);
+    }
+
     public static int getLongestSubarray(int[] arr, int sum) {
 
         int currentsum = 0;
@@ -34,12 +44,5 @@ public class Q14_longest_sub_array_sumk_optimal_solution {
         return maxLen;
     }
 
-    public static void main(String[] args) {
 
-        int[] a = {10, 2, -2, -20, 10};
-        int k = -10;
-
-        int len = getLongestSubarray(a, k);
-        System.out.println("The length of the longest subarray is: " + len);
-    }
 }

@@ -6,6 +6,7 @@ import java.util.*;
 public class Q14_find_sub_array_with_given_sum {
 
     public static void main(String[] args) {
+
         int[] arr = {10, 15, -5, 15, -10, 5};
         int sum = 5;
 

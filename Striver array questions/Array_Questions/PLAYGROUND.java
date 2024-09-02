@@ -1,45 +1,47 @@
 import java.util.*;
 
 
-// To find the longest length sub-array in array with sum of k : TC - O(n)
-
 public class PLAYGROUND {
-    public static int getLongestSubarray(int[] arr, int sum) {
-
-        int currentsum = 0;
-        int maxLen = 0;
-        HashMap<Integer, Integer> map = new HashMap<>();
-
-        for (int i = 0; i < arr.length; i++) {
-            currentsum += arr[i];
-
-            // If the currentsum equals the target sum, update the maxLen:
-            if (currentsum == sum) {
-                maxLen = Math.max(maxLen, i + 1);
-            }
-
-            // If (currentsum - sum) exists in the map, calculate the length of the subarray:
-            if (map.containsKey(currentsum - sum)) {
-                int len = i - map.get(currentsum - sum);
-                maxLen = Math.max(maxLen, len);
-            }
-
-            // Put the currentsum into the map only if it is not already present:
-            if (!map.containsKey(currentsum)) {
-                map.put(currentsum, i);
-            }
-
-        }
-
-        return maxLen;
-    }
 
     public static void main(String[] args) {
 
-        int[] a = {10, 2, -2, -20, 10};
-        int k = -10;
+        int[] arr = {10, 15, -5, 15, -10, 5};
+        int sum = 5;
 
-        int len = getLongestSubarray(a, k);
-        System.out.println("The length of the longest subarray is: " + len);
+        int result = findsubarray(arr, sum);
+        System.out.println(result);
+
+
+    }
+
+    static int findsubarray(int[] arr, int sum) {
+
+        int currentSum = 0;
+        int numcount = 0;
+
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < arr.length; i++) {
+            currentSum += arr[i];
+
+            // If the current sum is equal to the target sum
+            if (currentSum == sum) {
+                numcount++;
+            }
+
+            // If the current sum minus the target sum exists in the map
+            if (map.containsKey(currentSum - sum)) {
+                numcount++;
+            }
+
+            // Put the current sum into the map with the index
+            map.put(currentSum, i);
+        }
+
+        return numcount;
     }
 }
+
+//It looks like your code is indeed working correctly to count the number of subarrays with the given sum `k`. The output of `2` indicates that there are two subarrays in the array `{10, 15, -5, 15, -10, 5}` that sum up to `5`.
+//
+//If you have any more questions or need further clarification, feel free to ask!
