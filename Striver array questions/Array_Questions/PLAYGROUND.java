@@ -1,47 +1,41 @@
 import java.util.*;
 
-
 public class PLAYGROUND {
 
     public static void main(String[] args) {
 
-        int[] arr = {10, 15, -5, 15, -10, 5};
-        int sum = 5;
+        int[] arr = {3, -4, 2, -3, 1, 4, -1, 2, 0};
+        int sum = 0;
 
-        int result = findsubarray(arr, sum);
-        System.out.println(result);
-
+        int ans = finSmallestSubArray(arr, sum);
+        System.out.println(ans);
 
     }
 
-    static int findsubarray(int[] arr, int sum) {
-
-        int currentSum = 0;
-        int numcount = 0;
+    static int finSmallestSubArray(int[] arr, int sum){
+        int currentsum = 0;
+        int minlen = Integer.MAX_VALUE;
 
         HashMap<Integer, Integer> map = new HashMap<>();
 
-        for (int i = 0; i < arr.length; i++) {
-            currentSum += arr[i];
+        for(int i=0; i<arr.length; i++){
 
-            // If the current sum is equal to the target sum
-            if (currentSum == sum) {
-                numcount++;
+            if(currentsum == sum){
+                minlen = Math.min(minlen, i + 1);
             }
 
-            // If the current sum minus the target sum exists in the map
-            if (map.containsKey(currentSum - sum)) {
-                numcount++;
+            if(map.containsKey(currentsum - sum)){
+                int len = i - map.get(currentsum);
+                minlen = Math.min(minlen, len);
             }
 
-            // Put the current sum into the map with the index
-            map.put(currentSum, i);
+            if(!map.containsKey(currentsum)){
+                map.put(currentsum, i);
+            }
         }
-
-        return numcount;
+        return minlen;
     }
-}
 
-//It looks like your code is indeed working correctly to count the number of subarrays with the given sum `k`. The output of `2` indicates that there are two subarrays in the array `{10, 15, -5, 15, -10, 5}` that sum up to `5`.
-//
-//If you have any more questions or need further clarification, feel free to ask!
+
+
+}
