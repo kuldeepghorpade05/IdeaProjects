@@ -1,6 +1,9 @@
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.*;
 
-public class PLAYGROUND {
+public class Q15_two_sum_optimal_solution  {
 
     public static void main(String[] args) {
 
@@ -23,7 +26,7 @@ public class PLAYGROUND {
                 mp.put(arr[i], i);
             }
         }
-       return new int[]{-1,-1};
+        return new int[]{-1,-1};
     }
 
 
