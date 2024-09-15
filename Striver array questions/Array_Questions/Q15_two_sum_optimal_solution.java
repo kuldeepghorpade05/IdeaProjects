@@ -3,6 +3,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.*;
 
+/* TC = O(N) */
+
+
 public class Q15_two_sum_optimal_solution  {
 
     public static void main(String[] args) {
