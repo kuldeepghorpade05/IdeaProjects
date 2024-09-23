@@ -1,8 +1,8 @@
 package Genrics_and_Wrapper_Classes.Generics;
 
-import java.security.DigestException;
+// GENERIC CLASS
 
-public class g1 {
+public class GenericClass {
     public static void main(String[] args) {
 
         dog<String, Integer> d1 = new dog<>("hwlooo",74);

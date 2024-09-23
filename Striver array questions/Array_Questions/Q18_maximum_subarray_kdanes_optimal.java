@@ -1,5 +1,7 @@
 import java.util.*;
 
+/* TC = O(N) */
+
 public class Q18_maximum_subarray_kdanes_optimal {
 
 

@@ -1,49 +1,27 @@
+
 import java.util.*;
 
-public class PLAYGROUND {
-
-
+class PLAYGROUND{
     public static void main(String[] args) {
 
-        int[] arr = {-2,-3,4,-1,-2,1,5,-3};
-//        System.out.println(kdanes(arr));
-
-        int ans[] = kdanes(arr);
-        System.out.println(Arrays.toString(ans));
-
+        int[] arr = {7, 1, 5, 3, 6, 4};
+        System.out.println(BuySellStocks(arr));
 
     }
 
-    static int[] kdanes(int[] arr){
-        int maxsum = Integer.MIN_VALUE;
-        int sum = 0;
+    static int BuySellStocks(int[] arr){
 
-        int start = 0; int ansstart = -1; int ansend = -1;
+        int minimum = arr[0];  int profit = 0;
 
-        for(int i=0; i<arr.length; i++){
-            sum = sum + arr[i];
+        for(int i=1; i<arr.length; i++){
+            int cost = arr[i] - minimum;
 
-            if(sum > maxsum){
-                maxsum = sum;
-
-                ansstart = start;
-                ansend = i;
-            }
-
-            if(sum < 0){
-                sum = 0;
-                start = i + 1;
-            }
+            profit = Math.max(profit,cost);
+            minimum = Math.min(minimum, arr[i]);
         }
-        //edge case
-        if(maxsum < 0){
-            return new int[]{-1,-1};
-        }
-
-//        return maxsum;
-//        return Arrays.copyOfRange(arr,ansstart,ansend+1);
-        return new int[]{ansstart, ansend};
+        return profit;
     }
+  
 
 
 

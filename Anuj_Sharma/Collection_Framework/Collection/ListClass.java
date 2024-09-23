@@ -1,7 +1,9 @@
-package Collection_Framework;
+package Collection_Framework.Collection;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Vector;
 
 // list
 // Arraylist | LinkedList | Stack | Vector
@@ -84,6 +86,10 @@ public class ListClass {
 
 
 //        System.out.println(mylist.indexOf(1));
+
+        //sublist
+        List<Integer> sublist = mylist.subList(2,3);
+        System.out.println(sublist);
 
 
 
