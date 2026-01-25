@@ -1,0 +1,40 @@
+package Sorting.Cyclic_Sort_questions;
+//https://leetcode.com/problems/missing-number/description/
+
+public class Q1_Missing_number {
+    public static void main(String[] args) {
+
+        int[] arr = {3, 0, 1};
+        System.out.println(MissingNumber(arr));
+
+    }
+
+    static int MissingNumber(int[] arr){
+        int i = 0;
+        while(i < arr.length){
+            int correctIndex = arr[i];
+            if(arr[i] < arr.length && arr[i] != arr[correctIndex]){
+               //swap
+                int temp = arr[i];
+                arr[i] = arr[correctIndex];
+                arr[correctIndex] = temp;
+            }else {
+                i++;
+            }
+        }
+
+        //case 1
+        //search for first missing number
+        for(int index = 0; index < arr.length; index++){
+            if(arr[index] != index){
+                return index;
+            }
+        }
+
+        //case 2
+        return arr.length;
+
+
+    }
+
+}

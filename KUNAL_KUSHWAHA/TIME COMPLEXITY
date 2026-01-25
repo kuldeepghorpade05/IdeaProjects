@@ -1,0 +1,84 @@
+Here’s a complete explanation of common **time complexities**, starting from **O(1)** (constant time) up to **O(n!)** (factorial time), with **examples** and how they scale:
+
+---
+
+### ✅ 1. **O(1) – Constant Time**
+
+* **Description:** Time doesn't grow with input size.
+* **Example:** Accessing an element in an array by index: `arr[5]`
+* **Scales like:** 1 step, no matter how large `n` is.
+
+---
+
+### ✅ 2. **O(log n) – Logarithmic Time**
+
+* **Description:** The problem size reduces by a factor (e.g., half) each step.
+* **Example:** Binary search
+* **Scales like:** log₂(n) → 10 steps for 1024 elements
+
+---
+
+### ✅ 3. **O(n) – Linear Time**
+
+* **Description:** Time grows directly with input size.
+* **Example:** Finding the max element in an array
+* **Scales like:** 10 steps for 10 elements, 1000 steps for 1000 elements
+
+---
+
+### ✅ 4. **O(n log n) – Linearithmic Time**
+
+* **Description:** Logarithmic operation done for each of `n` items.
+* **Example:** Merge Sort, Heap Sort
+* **Scales like:** Faster than quadratic but slower than linear
+
+---
+
+### ✅ 5. **O(n²) – Quadratic Time**
+
+* **Description:** For every element, you do a linear amount of work.
+* **Example:** Bubble Sort, Selection Sort, nested loops
+* **Scales like:** 100 elements → 10,000 steps
+
+---
+
+### ✅ 6. **O(n³) – Cubic Time**
+
+* **Description:** Triple nested loops
+* **Example:** Checking all triplets in an array
+* **Scales like:** 100 elements → 1,000,000 steps
+
+---
+
+### ✅ 7. **O(2ⁿ) – Exponential Time**
+
+* **Description:** Input size doubles computation
+* **Example:** Solving subset problems, recursive Fibonacci
+* **Scales like:** 20 elements → 1 million+ steps
+
+---
+
+### ✅ 8. **O(n!) – Factorial Time**
+
+* **Description:** Trying all permutations of `n` elements
+* **Example:** Solving Travelling Salesman Problem (brute-force), generating permutations
+* **Scales like:** 10 elements → 3,628,800 steps
+
+---
+
+### Summary Table:
+
+| Complexity | Name         | Example                      |
+| ---------- | ------------ | ---------------------------- |
+| O(1)       | Constant     | Array access                 |
+| O(log n)   | Logarithmic  | Binary Search                |
+| O(n)       | Linear       | Finding max                  |
+| O(n log n) | Linearithmic | Merge Sort                   |
+| O(n²)      | Quadratic    | Nested loops (2 levels)      |
+| O(n³)      | Cubic        | Nested loops (3 levels)      |
+| O(2ⁿ)      | Exponential  | Recursive Fibonacci, subsets |
+| O(n!)      | Factorial    | Brute-force permutations     |
+
+---
+
+Would you like visual graphs or real code examples for these complexities?
